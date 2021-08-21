@@ -1,12 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
-
 :root {
     --primary-colour: #F2C94C;
 }
+
 body {
     font-family: 'Kalam', cursive;
     margin: 0;
+    padding: 0;
+    height: 100%;
 }
+
+.input-translate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 nav {
     background-color: var(--primary-colour);
     color: black;
@@ -16,12 +25,20 @@ nav {
     font-size: 2rem;
 }
 
-#txt-input{
-    width: 70%;
+img {
+    margin-top: 0;
+    margin-bottom: 0%;
+    width: 50%;
     margin: auto;
-    padding: 1.5rem;
-    display: block;
-    height: 3.5rem;
+    align-items: center;
+}
+
+#txt-input,
+#output {
+    padding: 2rem;
+    margin: 1.5rem;
+    width: 70%;
+    height: 3rem;
 }
 
 #btn-translate {
@@ -38,20 +55,13 @@ nav {
     text-align: center;
 }
 
-#output {
-     width: 70%;
-    margin: auto;
-    padding: 1.5rem;
-    display: block;
-    margin-bottom: 3rem;
-    height: 3rem;
-}
-
 img {
     float: right;
 }
+
 footer {
-    position: fixed;
+    margin-top: 2rem;
+    position: relative;
     bottom: 0;
     width: 100%;
     padding-top: 0.5rem;
@@ -61,3 +71,12 @@ footer {
     text-align: center;
 }
 
+@media screen and (max-width: 400px) {
+    img {
+        width: 100%;
+    }
+    #txt-input,
+    #output {
+        padding: 1.5rem 1rem 1.5rem 1rem;
+    }
+}

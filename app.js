@@ -21,11 +21,11 @@ function clickHandler() {
 
     //calling server for processing
     fetch(getTranslationURL(inputText))
-    .then(Response => Response.json())
-    .then(json => {
-        var translatedText = json.contents.translated;
-        outputDiv.innerText = translatedText; //output
-    })
-    .catch(errorhandler);
-}    
-btnTranslate.addEventListener("click",clickHandler)
+        .then(Response => Response.json())
+        .then(json => {
+            var translatedText = json.contents.translated;
+            outputDiv.innerText = translatedText; //output
+        })
+        .catch(errorhandler);
+}
+btnTranslate.addEventListener("click", clickHandler)
